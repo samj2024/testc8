@@ -99,6 +99,64 @@ for (numbers = 1; numbers < 16; numbers++) {
     }
 }
 }
-fizzbuzz(2)
+fizzbuzz(16)
 
+//Week 3
+window.addEventListener('load', function(event) {
+    printText()
+    printInputText()
+    sendContactDetails()
+//  console.log("page loaded", event)
+})
 
+function printText(){
+    const button = document.getElementById('click-btn')
+ // console.log(button)
+    button.addEventListener('click', () => {
+//  function code
+        const login = document.getElementById('login')
+        const company = document.getElementById('company')
+        const website = document.getElementById('website')
+        
+//    const h1 = document.getElementById('title')
+//    h1.innerHTML = "<p>My name is Aditya</p>"
+//Adi Profile: adityar15
+        fetch("https://api.github.com/users/samj2024")
+        .then((response) => response.json())
+        .then((data) => {
+            console.log("data we received", data)
+            login.innerHTML = data.login
+            website.innerHTML = data.blog
+            company.innerHTML = data.company
+    })
+    })
+}
+
+function printInputText()
+{
+    const fnInput = document.getElementById('fn-input')
+    const spanText = document.getElementById('input-text')
+
+    fnInput.addEventListener("input", (event) =>{
+ //     console.log("event", event)
+        const inputValue = fnInput.Value
+        spanText.innerHTML = inputValue
+    })
+}
+
+function sendContactDetails()
+{
+    const form = document.getElementById('contact-form')
+
+//  console.log(form)
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault()
+
+        const formData = new FormData(form)
+
+        const data = Object.fromEntries(formData.entries())
+    
+        console.log("formData", data)
+    })
+}

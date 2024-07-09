@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+    
     <title>Document</title>
 </head>
 <body>
@@ -14,8 +14,26 @@
         <img src="https://www.pinclipart.com/picdir/big/85-850160_hibiscus-flower-logo-vector-format-cdr-ai-eps.png" alt="Flower Logo">
     </header>
 
-    <form action="https://example.com/contact-form" method="POST" class="max-w-md mx-auto my-10 flex flex-col gap-5">
+<!-- // Week 3 -->
+    <header class="w-full h-20 bg-green-500"><a href="/">Logo</a></header>
+    
+    <h1 id="login"></h1>
+    <h1 id="company"></h1>
+    <h1 id="website"></h1>
+
+    <button id="click-btn" class="bg-green-500 my-10 text-white px-5 py-2">Click this</button>
+
+    <div class="flex flex-col">
+        <label class="text-lg text-gray-900" for="full_name">Full Name</label>
+        <input type="text" id="fn-input" class="border border-gray-500 p-2" name="full_name" />
+        <span id="input-text"></span>
+    </div>
+
+<!-- // Week 3 -->
+
+    <form action="https://example.com/contact-form" method="POST" id="contact-form" class="max-w-md mx-auto my-10 flex flex-col gap-5">
         
+
         <div class="flex justify between">
             <label class="text-lg text-gray-900" for="full_name">Full Name</label>
             <input type="text" class="border border-gray-500 p-2" name="full_name" />
@@ -42,5 +60,8 @@
         <p>Daffodils and pansies are on special offer this week. Quote the code 'JUNE 10' to get a 10% discount on your order.</p>
         <a href="https://www.gardenersworld.com/" target="_blank" rel="noopener noreferrer">This is the Gardeners World website in a new window</a>
     </div>
+
+    <script src="index.js"></script>
+
 </body>
 </html>
